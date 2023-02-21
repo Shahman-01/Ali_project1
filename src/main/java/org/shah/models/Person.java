@@ -30,7 +30,7 @@ public class Person {
 	@Column(name = "date_of_birth")
 	private LocalDate dateOfBirth;
 
-	@OneToMany(mappedBy = "person")
+	@OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Book> books = new ArrayList<>();
 

@@ -10,23 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03a2599b-166f-43db-bd86-7cae30b66a9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shah/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c89c482-2638-42a0-80df-a0a9ed2d95d8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6c89c482-2638-42a0-80df-a0a9ed2d95d8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c89c482-2638-42a0-80df-a0a9ed2d95d8/storage_v2/_src_/database/alishev.ZFSFyQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6c89c482-2638-42a0-80df-a0a9ed2d95d8/storage_v2/_src_/database/alishev.ZFSFyQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/shah/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shah/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/shah/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shah/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shah/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shah/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shah/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shah/services/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shah/services/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shah/services/PersonServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +194,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676898755715</updated>
-      <workItem from="1676898756871" duration="10560000" />
+      <workItem from="1676898756871" duration="11578000" />
     </task>
     <servers />
   </component>

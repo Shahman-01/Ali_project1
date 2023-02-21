@@ -6,10 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +39,35 @@ public class MainController {
 		return new ResponseEntity<>(person, HttpStatus.OK);
 	}
 
+	@PostMapping()
+	public ResponseEntity<Person> savePerson(@RequestBody Person person) {
+		if (person == null)
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+		personService.save(person);
+		return new ResponseEntity<>(person, HttpStatus.CREATED);
+	}
+
+	@PutMapping("/{id}")
+	public ResponseEntity<Person> updatePerson(@RequestBody Person person) {
+		if (person == null)
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+		personService.save(person);
+		return new ResponseEntity<>(person, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Person> deletePerson(@PathVariable("id") int id) {
+		Person person = personService.get(id);
+
+		if (person == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+		personService.delete(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
 }
 
 
