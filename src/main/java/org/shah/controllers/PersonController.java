@@ -4,20 +4,18 @@ import org.shah.models.Person;
 import org.shah.services.PersonServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/people")
-public class MainController {
+public class PersonController {
 
 	private final PersonServiceImpl personService;
 
-	public MainController(PersonServiceImpl personService) {
+	public PersonController(PersonServiceImpl personService) {
 		this.personService = personService;
 	}
 
