@@ -9,7 +9,7 @@ public interface PersonService {
 	Person save(Person Person);
 
 	// false if Person does not belong to userId
-	boolean delete(int id);
+	void delete(int id);
 
 	// null if Person does not belong to userId
 	Person get(int id);

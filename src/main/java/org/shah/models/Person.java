@@ -1,5 +1,6 @@
 package org.shah.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,6 +8,8 @@ import lombok.Setter;
 import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,9 +23,15 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String FIO;
-	private Date dateOfBirth;
 
-	@OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
-	private List<Book> books;
+	@Column(name = "FIO")
+	private String FIO;
+
+	@Column(name = "date_of_birth")
+	private LocalDate dateOfBirth;
+
+	@OneToMany(mappedBy = "person")
+	@JsonIgnore
+	private List<Book> books = new ArrayList<>();
+
 }

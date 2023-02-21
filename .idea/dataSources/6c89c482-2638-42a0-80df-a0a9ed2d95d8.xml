@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>19095</IntrospectionStateNumber>
+      <IntrospectionStateNumber>19150</IntrospectionStateNumber>
       <ServerVersion>14.2</ServerVersion>
       <StartupTime>1669840208</StartupTime>
       <TimeZones>true ACDT
@@ -800,10 +800,10 @@ false Zulu
 13655||10|C|G
 13655||-9223372036854775808|U|G
 13655||10|U|G</Grants>
-      <IntrospectionStateNumber>19095</IntrospectionStateNumber>
+      <IntrospectionStateNumber>19150</IntrospectionStateNumber>
       <ObjectId>60499</ObjectId>
-      <Relations>sequence|table|60731|60732|1
-sequence|table|60712|60713|1
+      <Relations>sequence|table|60856|60857|1
+sequence|table|60864|60865|1
 </Relations>
       <OwnerName>sahmanmagomadov</OwnerName>
     </database>
@@ -4256,32 +4256,32 @@ sequence|table|60712|60713|1
     <schema id="268" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>19095</IntrospectionStateNumber>
+      <IntrospectionStateNumber>19150</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <sequence id="269" parent="268" name="book_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>60731</ObjectId>
-      <StateNumber>19094</StateNumber>
+      <ObjectId>60864</ObjectId>
+      <StateNumber>19149</StateNumber>
       <OwnerName>sahmanmagomadov</OwnerName>
     </sequence>
     <sequence id="270" parent="268" name="person_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>60712</ObjectId>
-      <StateNumber>19086</StateNumber>
+      <ObjectId>60856</ObjectId>
+      <StateNumber>19148</StateNumber>
       <OwnerName>sahmanmagomadov</OwnerName>
     </sequence>
     <table id="271" parent="268" name="book">
-      <ObjectId>60732</ObjectId>
-      <StateNumber>19094</StateNumber>
+      <ObjectId>60865</ObjectId>
+      <StateNumber>19149</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>sahmanmagomadov</OwnerName>
     </table>
     <table id="272" parent="268" name="person">
-      <ObjectId>60713</ObjectId>
-      <StateNumber>19094</StateNumber>
+      <ObjectId>60857</ObjectId>
+      <StateNumber>19149</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>sahmanmagomadov</OwnerName>
     </table>
@@ -4290,112 +4290,98 @@ sequence|table|60712|60713|1
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>19094</StateNumber>
+      <StateNumber>19149</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="274" parent="271" name="person_id">
       <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>19094</StateNumber>
+      <StateNumber>19149</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="275" parent="271" name="author">
+    <column id="275" parent="271" name="title">
       <DataType>varchar|0s</DataType>
       <Position>3</Position>
-      <StateNumber>19094</StateNumber>
+      <StateNumber>19149</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="271" name="year">
-      <DataType>integer|0s</DataType>
+    <column id="276" parent="271" name="author">
+      <DataType>varchar|0s</DataType>
       <Position>4</Position>
-      <StateNumber>19094</StateNumber>
+      <StateNumber>19149</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="277" parent="271" name="year">
+      <DataType>integer|0s</DataType>
+      <Position>5</Position>
+      <StateNumber>19149</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="277" parent="271" name="book_person_id_fkey">
+    <foreign-key id="278" parent="271" name="book_person_id_fkey">
       <ColNames>person_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60739</ObjectId>
+      <ObjectId>60872</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>19094</StateNumber>
-      <RefTableId>60713</RefTableId>
+      <StateNumber>19149</StateNumber>
+      <RefTableId>60857</RefTableId>
       <RefTableName>person</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="278" parent="271" name="book_pkey">
+    <index id="279" parent="271" name="book_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60737</ObjectId>
+      <ObjectId>60870</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>19094</StateNumber>
+      <StateNumber>19149</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="279" parent="271" name="book_pkey">
+    <key id="280" parent="271" name="book_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60738</ObjectId>
+      <ObjectId>60871</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>19094</StateNumber>
-      <UnderlyingIndexId>60737</UnderlyingIndexId>
+      <StateNumber>19149</StateNumber>
+      <UnderlyingIndexId>60870</UnderlyingIndexId>
     </key>
-    <check id="280" parent="272" name="person_year_of_birth_check">
-      <ColNames>year_of_birth</ColNames>
-      <ObjectId>60716</ObjectId>
-      <Predicate>year_of_birth &gt; 1900</Predicate>
-      <StateNumber>19086</StateNumber>
-    </check>
     <column id="281" parent="272" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>19086</StateNumber>
+      <StateNumber>19148</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="282" parent="272" name="fio">
       <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>19086</StateNumber>
+      <StateNumber>19148</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="283" parent="272" name="year_of_birth">
-      <DataType>integer|0s</DataType>
+    <column id="283" parent="272" name="date_of_birth">
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>19086</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>19148</StateNumber>
+      <TypeId>1082</TypeId>
     </column>
     <index id="284" parent="272" name="person_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60719</ObjectId>
+      <ObjectId>60862</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>19086</StateNumber>
+      <StateNumber>19148</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="285" parent="272" name="person_fio_key">
-      <ColNames>fio</ColNames>
+    <key id="285" parent="272" name="person_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60721</ObjectId>
-      <StateNumber>19086</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationNames>default</CollationNames>
-      <CollationIds>100</CollationIds>
-      <CollationParentNames>pg_catalog</CollationParentNames>
-    </index>
-    <key id="286" parent="272" name="person_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60720</ObjectId>
+      <ObjectId>60863</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>19086</StateNumber>
-      <UnderlyingIndexId>60719</UnderlyingIndexId>
-    </key>
-    <key id="287" parent="272" name="person_fio_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>60722</ObjectId>
-      <StateNumber>19086</StateNumber>
-      <UnderlyingIndexId>60721</UnderlyingIndexId>
+      <StateNumber>19148</StateNumber>
+      <UnderlyingIndexId>60862</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

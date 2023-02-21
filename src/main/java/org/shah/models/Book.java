@@ -17,12 +17,19 @@ import java.util.Date;
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
+
+	@Column(name = "title")
 	private String title;
+
+	@Column(name = "author")
 	private String author;
-	private Date year;
+
+	@Column(name = "year")
+	private Integer year;
 
 	@ManyToOne
-	@JoinColumn(name = "person_id", referencedColumnName = "id")
+	@JoinColumn(name = "person_id")
 	private Person person;
+
 }
